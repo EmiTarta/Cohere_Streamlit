@@ -39,7 +39,7 @@ streamlit run app.py
 ### Capturas de Pantalla
 
 Aquí tienes un vistazo de cómo luce la aplicación:
-![Captura de Pantalla de la App(https://github.com/EmiTarta/Cohere_Streamlit/blob/main/Pagina_inicial.png)
+![Captura de Pantalla de la App](https://github.com/EmiTarta/Cohere_Streamlit/blob/main/Pagina_inicial.png)
 
 ### Contribuciones
 Si deseas contribuir, ¡no dudes en abrir un issue o un pull request!
