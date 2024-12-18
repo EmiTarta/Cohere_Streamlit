@@ -35,7 +35,7 @@ st.markdown("""
 texto_subido = st.file_uploader("Sube aquí tu archivo .txt", type="txt", help="Asegúrate de subir un archivo de texto sin formato (.txt).")
 
 if texto_subido is not None:
-    texto = texto_subido.getvalue().decode("utf-8")
+    texto = texto_subido.read().decode("utf-8")
     st.success("Archivo cargado exitosamente. ¡Puedes hacer tu pregunta ahora!")
 
     # Función para dividir el texto en chunks
@@ -43,31 +43,22 @@ if texto_subido is not None:
         return [texto[i:i+tamaño] for i in range(0, len(texto), tamaño)]
 
     chunks = dividir_texto(texto, 500)
-    
+ 
     # Función para calcular similitud
     def calculate_similarity(a, b):
         return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
-    
-    # Input del usuario
-    user_input = st.text_input("Ingresa tu pregunta aquí:")
-    if st.button("Analizar"):
-        if user_input:
-            # Procesar embeddings
-            model = "embed-spanish-v3.0"
-            input_type = "search_query"
 
     # Embeddings de los chunks
-    res = co.embed(texts=chunks, model=model, input_type=input_type, embedding_types=['float'])
+    res = co.embed(texts=chunks, model="embed-english-v3.0", input_type="search_query", embedding_types=['float'])
     cosas = res.embeddings.float
-
 
     # Input del usuario
     user_input = st.text_input("Cuál es tu pregunta:")
 
-    if st.button("Analizar"):
+    if st.button("Analiza"):
         if user_input:
             # Embedding de la pregunta del usuario
-            impus = co.embed(texts=[user_input], model=model, input_type=input_type, embedding_types=['float'])
+            impus = co.embed(texts=[user_input], model="embed-english-v3.0", input_type="search_query", embedding_types=['float'])
             pregunta = impus.embeddings.float[0]
 
             # Calcular similitudes
@@ -84,11 +75,8 @@ if texto_subido is not None:
             )
             generated_text = response.generations[0].text.strip()
 
-            st.write("**Respuesta del Asistente:**")
-            st.write(generated_text)
-
             st.subheader("Respuesta del Asistente:")
-            st.markdown(f"<div style='padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;'>{generated_text}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div style='padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color:rgb(0, 0, 0);'>{generated_text}</div>", unsafe_allow_html=True)
         else:
             st.warning("Por favor, ingresa una pregunta válida.")
 else:
