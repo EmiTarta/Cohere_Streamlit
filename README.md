@@ -4,7 +4,7 @@ Cohere Text Analysis App
 
 ![Captura de Pantalla de la App](https://github.com/EmiTarta/Cohere_Streamlit/blob/main/Pagina_inicial.png)
 
-### Características
+### Característicashttps://github.com/EmiTarta/Cohere_Streamlit/blob/main/README.md
 - Analiza archivos de texto dividiéndolos en fragmentos.
 - Calcula similitudes de embeddings para encontrar el texto más relevante.
 - Genera respuestas a preguntas usando la API de Cohere.
@@ -38,10 +38,7 @@ streamlit run app.py
 ### Requisitos
 - Python 3.7 o superior.
 - Cuenta activa de Cohere con una clave de API válida.
-### Link de la aplicación desplegada en Streamlit
 
-Este es el link de la aplicación desplegada en Streamlit: ![Predictor_Salarios](https://cohereapp-l.streamlit.app/)
-Nota: si el link no funciona, se debe a que la versión gratuita de Streamlit permite sólo un proyecto desplegado, y este se ha dado de baja.  
 
 ### Contribuciones
 Si deseas contribuir, ¡no dudes en abrir un issue o un pull request!
