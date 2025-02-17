@@ -40,7 +40,7 @@ streamlit run app.py
 - Cuenta activa de Cohere con una clave de API válida.
 ### Link de la aplicación desplegada en Streamlit
 
-Este es el link de la aplicación desplegada en Streamlit: ![Predictor_Salarios](https://geminiapp-l.streamlit.app/)
+Este es el link de la aplicación desplegada en Streamlit: ![Predictor_Salarios](https://cohereapp-l.streamlit.app/)
 Nota: si el link no funciona, se debe a que la versión gratuita de Streamlit permite sólo un proyecto desplegado, y este se ha dado de baja.  
 
 ### Contribuciones
