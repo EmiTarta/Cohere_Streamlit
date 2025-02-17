@@ -41,5 +41,8 @@ streamlit run app.py
 Aquí tienes un vistazo de cómo luce la aplicación:
 ![Captura de Pantalla de la App](https://github.com/EmiTarta/Cohere_Streamlit/blob/main/Pagina_inicial.png)
 
+Este es el link de la aplicación desplegada en Streamlit: ![Predictor_Salarios](https://geminiapp-l.streamlit.app/)
+Nota: si el link no funciona, se debe a que la versión gratuita de Streamlit permite sólo un proyecto desplegado, y este se ha dado de baja.  
+
 ### Contribuciones
 Si deseas contribuir, ¡no dudes en abrir un issue o un pull request!
